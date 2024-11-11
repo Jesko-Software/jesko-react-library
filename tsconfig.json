@@ -1,16 +1,27 @@
+// {
+//     "compilerOptions": {
+//       "target": "ES6",
+//       "module": "ESNext",
+//       "jsx": "react-jsx",
+//       "declaration": true,
+//       "outDir": "dist",
+//       "moduleResolution": "node",
+//       "esModuleInterop": true,
+//       "skipLibCheck": true,
+//       "forceConsistentCasingInFileNames": true
+//     },
+//     "include": ["src/**/*"],
+//     "exclude": ["node_modules", "dist"]
+// }
+
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "ESNext",
-      "jsx": "react-jsx",
-      "declaration": true,
-      "outDir": "dist",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
-  }
-  
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "strict": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["src"]
+}
