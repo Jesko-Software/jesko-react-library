@@ -11,3 +11,14 @@
 
 #!.yarn/cache
 .pnp.*
+
+
+# Ignore node_modules
+node_modules
+
+# vscode
+.vscode
+*storybook.log
+
+# storybook
+src/stories
