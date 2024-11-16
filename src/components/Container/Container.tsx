@@ -8,15 +8,23 @@ interface ContainerProps {
   backgroundColor?: string
   border?: string
   borderRadius?: string
+  display?: string
+  justifyContent?: string
+  alignItems?: string
+  height?: string
 }
 
 export default function Container({
   children,
-  padding = '16px',          // Default padding
-  margin = '0',               // Default margin
-  backgroundColor = 'inherit', // Default to inherit background color
-  border = 'none',            // Default border
-  borderRadius = '0'          // Default border radius
+  padding = '16px',
+  margin = '0',
+  backgroundColor = 'inherit',
+  border = 'none',
+  borderRadius = '0',
+  display = 'flex',          // Default to flex for Container
+  justifyContent,            // Optional, no default
+  alignItems,                // Optional, no default
+  height,                    // Optional, no default
 }: ContainerProps) {
   return (
     <ContainerWrapper
@@ -25,7 +33,11 @@ export default function Container({
         margin,
         backgroundColor,
         border,
-        borderRadius
+        borderRadius,
+        display,
+        justifyContent,
+        alignItems,
+        height,
       }}
     >
       {children}
