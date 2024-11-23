@@ -1599,6 +1599,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-viewport@npm:^8.4.4":
+  version: 8.4.4
+  resolution: "@storybook/addon-viewport@npm:8.4.4"
+  dependencies:
+    memoizerific: "npm:^1.11.3"
+  peerDependencies:
+    storybook: ^8.4.4
+  checksum: 10c0/de85220336d119fc1ff71fe78d54767985c1eb37cd4a03ccd43d5ccddd6f1d1e43aa73fb8f304eaa6e53c4a78234adc80482aa2f593ad272bc1389f1ec044805
+  languageName: node
+  linkType: hard
+
 "@storybook/blocks@npm:8.4.2, @storybook/blocks@npm:^8.4.2":
   version: 8.4.2
   resolution: "@storybook/blocks@npm:8.4.2"
@@ -4099,6 +4110,7 @@ __metadata:
     "@storybook/addon-essentials": "npm:^8.4.2"
     "@storybook/addon-interactions": "npm:^8.4.2"
     "@storybook/addon-onboarding": "npm:^8.4.2"
+    "@storybook/addon-viewport": "npm:^8.4.4"
     "@storybook/blocks": "npm:^8.4.2"
     "@storybook/react": "npm:^8.4.2"
     "@storybook/react-vite": "npm:^8.4.2"
