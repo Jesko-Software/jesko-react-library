@@ -1,25 +1,33 @@
-import { ReactNode } from 'react'
-import { HeaderWrapper } from './Header.styles.ts'
+import { ReactNode, CSSProperties } from 'react'
+import { HeaderWrapper } from './Header.styles'
 
-type HeaderProps = {
+interface HeaderProps {
   children: ReactNode
-  center?: boolean
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' // Dynamic header type
-  font?: string
-  fontSize?: string
-  color?: string
+  textAlign?: CSSProperties['textAlign']
+  fontFamily?: CSSProperties['fontFamily']
+  fontSize?: CSSProperties['fontSize']
+  color?: CSSProperties['color']
 }
 
 export default function Header({
   children,
-  center = false,
   as = 'h1', // Default to h1
-  font,
+  textAlign,
+  fontFamily,
   fontSize,
-  color
+  color,
 }: HeaderProps) {
   return (
-    <HeaderWrapper as={as} center={center} font={font} fontSize={fontSize} color={color}>
+    <HeaderWrapper
+      as={as}
+      style={{
+        textAlign,
+        fontFamily,
+        fontSize,
+        color,
+      }}
+    >
       {children}
     </HeaderWrapper>
   )
