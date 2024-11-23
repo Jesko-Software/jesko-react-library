@@ -1,5 +1,12 @@
-import { ReactNode } from 'react';
-import { ContainerWrapper } from './Container.styles.ts';
+import { ReactNode } from 'react'
+import { ContainerWrapper } from './Container.styles'
+
+interface ResponsiveProps {
+  small?: Partial<CSSStyleDeclaration>
+  medium?: Partial<CSSStyleDeclaration>
+  large?: Partial<CSSStyleDeclaration>
+  xl?: Partial<CSSStyleDeclaration>
+}
 
 interface ContainerProps {
   children: ReactNode
@@ -12,6 +19,8 @@ interface ContainerProps {
   justifyContent?: string
   alignItems?: string
   height?: string
+  width?: string
+  responsive?: ResponsiveProps
 }
 
 export default function Container({
@@ -21,10 +30,12 @@ export default function Container({
   backgroundColor = 'inherit',
   border = 'none',
   borderRadius = '0',
-  display = 'flex',          // Default to flex for Container
-  justifyContent,            // Optional, no default
-  alignItems,                // Optional, no default
-  height,                    // Optional, no default
+  display = 'flex',
+  justifyContent,
+  alignItems,
+  height,
+  width = '100%',
+  responsive,
 }: ContainerProps) {
   return (
     <ContainerWrapper
@@ -38,7 +49,9 @@ export default function Container({
         justifyContent,
         alignItems,
         height,
+        width,
       }}
+      responsive={responsive}
     >
       {children}
     </ContainerWrapper>

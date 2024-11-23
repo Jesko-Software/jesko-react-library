@@ -16,28 +16,40 @@ export const TestPage = () => (
   <ThemeProvider theme={baseTheme}>
     <Container border='1px solid black'>
       <Row>
-        <Header center>Welcome to Jesko</Header>
+        <Container padding='0px'>
+          <Header textAlign='center'>Welcome to Jesko</Header>
+        </Container>
       </Row>
       <Row>
         <Container border='1px solid blue'>
           <Row>
             <Column width="25%">
               <Container border='1px solid red' padding='0px'>
-                <Header>Hello 4</Header>
-                <Paragraph center>Column 1</Paragraph>
+                <Header textAlign='center'>Hello 4</Header>
+                <Paragraph textAlign="center">Column 1</Paragraph>
               </Container>
             </Column>
             <Column width="25%">
               <Header>Hello 4</Header>
-              <Paragraph center>Column 2</Paragraph>
+              <Paragraph  textAlign="center">Column 2</Paragraph>
             </Column>
             <Column width="25%">
               <Header>Hello 4</Header>
-              <Paragraph center>Column 3</Paragraph>
+              <Paragraph  textAlign="center">Column 3</Paragraph>
             </Column>
             <Column width="25%">
               <Header>Hello 4</Header>
-              <Paragraph center>Column 4</Paragraph>
+              <Paragraph  textAlign="center">Column 4</Paragraph>
+            </Column>
+          </Row>
+          <Row>
+            <Column width="50%">
+                <Header>Hello 4</Header>
+                <Paragraph  textAlign="center">Column 1</Paragraph>
+            </Column>
+            <Column width="50%">
+              <Header>Hello 4</Header>
+              <Paragraph  textAlign="center">Column 2</Paragraph>
             </Column>
           </Row>
         </Container>
@@ -53,12 +65,23 @@ export const LoginPage = () => (
     justifyContent="center"
     alignItems="center"
     height="100vh"
-
+    border='1px solid black'
     >
-      <Header 
-      center
-      as="h2"
-      >Login Here</Header>
+      <Container
+      width='50%'
+      border='2px solid blue'
+      responsive={{
+        small: { width: '90%' },
+        medium: { width: '80%' }
+      }}
+      >
+        <Header 
+        textAlign='center'
+        as="h2"
+        >Login Here</Header>
+        <Header as='h3'>Username: ___________</Header>
+        <Header as='h3'>Password: ___________</Header>
+      </Container>
     </Container>
   </ThemeProvider>
 )
@@ -72,7 +95,7 @@ export const BasicThemePage = () => (
     height="100vh"
     >
       <Header 
-        center
+        textAlign='center'
         as="h2"
       >Login Here</Header>
     </Container>
