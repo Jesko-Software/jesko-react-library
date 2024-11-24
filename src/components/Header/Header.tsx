@@ -1,5 +1,6 @@
 import { ReactNode, CSSProperties } from 'react'
 import { HeaderWrapper } from './Header.styles'
+import { ResponsiveProps } from '../../utils/responsive'
 
 interface HeaderProps {
   children: ReactNode
@@ -8,6 +9,7 @@ interface HeaderProps {
   fontFamily?: CSSProperties['fontFamily']
   fontSize?: CSSProperties['fontSize']
   color?: CSSProperties['color']
+  responsive?: ResponsiveProps
 }
 
 export default function Header({
@@ -17,6 +19,7 @@ export default function Header({
   fontFamily,
   fontSize,
   color,
+  responsive
 }: HeaderProps) {
   return (
     <HeaderWrapper
@@ -27,6 +30,7 @@ export default function Header({
         fontSize,
         color,
       }}
+      responsive={responsive}
     >
       {children}
     </HeaderWrapper>

@@ -1,5 +1,6 @@
 import { ReactNode, CSSProperties } from 'react'
 import { ParagraphWrapper } from './Paragraph.styles'
+import { ResponsiveProps } from '../../utils/responsive'
 
 interface ParagraphProps {
   children: ReactNode
@@ -7,6 +8,7 @@ interface ParagraphProps {
   color?: CSSProperties['color']
   fontFamily?: CSSProperties['fontFamily']
   fontSize?: CSSProperties['fontSize']
+  responsive?: ResponsiveProps
 }
 
 export default function Paragraph({
@@ -15,6 +17,7 @@ export default function Paragraph({
   color,
   fontFamily,
   fontSize,
+  responsive
 }: ParagraphProps) {
   return (
     <ParagraphWrapper
@@ -24,6 +27,7 @@ export default function Paragraph({
         fontFamily,
         fontSize,
       }}
+      responsive={responsive}
     >
       {children}
     </ParagraphWrapper>

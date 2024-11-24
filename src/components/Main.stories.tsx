@@ -79,8 +79,8 @@ export const LoginPage = () => (
         textAlign='center'
         as="h2"
         >Login Here</Header>
-        <Header as='h3'>Username: ___________</Header>
-        <Header as='h3'>Password: ___________</Header>
+        <Header as='h3' responsive={{small: { color: 'red'}}}>Username: ___________</Header>
+        <Header as='h3' responsive={{large: { color: 'purple' }}}>Password: ___________</Header>
       </Container>
     </Container>
   </ThemeProvider>

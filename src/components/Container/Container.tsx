@@ -1,12 +1,6 @@
 import { ReactNode } from 'react'
 import { ContainerWrapper } from './Container.styles'
-
-interface ResponsiveProps {
-  small?: Partial<CSSStyleDeclaration>
-  medium?: Partial<CSSStyleDeclaration>
-  large?: Partial<CSSStyleDeclaration>
-  xl?: Partial<CSSStyleDeclaration>
-}
+import { ResponsiveProps } from '../../utils/responsive'
 
 interface ContainerProps {
   children: ReactNode
