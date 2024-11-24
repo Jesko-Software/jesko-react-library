@@ -1,11 +1,35 @@
-import { ReactNode } from 'react'
+import { ReactNode, CSSProperties } from 'react'
 import { ParagraphWrapper } from './Paragraph.styles'
+import { ResponsiveProps } from '../../utils/responsive'
 
-type ParagraphProps = {
+interface ParagraphProps {
   children: ReactNode
-  center?: boolean
+  textAlign?: CSSProperties['textAlign']
+  color?: CSSProperties['color']
+  fontFamily?: CSSProperties['fontFamily']
+  fontSize?: CSSProperties['fontSize']
+  responsive?: ResponsiveProps
 }
 
-export default function Paragraph({ children, center = false }: ParagraphProps) {
-  return <ParagraphWrapper center={center}>{children}</ParagraphWrapper>
+export default function Paragraph({
+  children,
+  textAlign,
+  color,
+  fontFamily,
+  fontSize,
+  responsive
+}: ParagraphProps) {
+  return (
+    <ParagraphWrapper
+      style={{
+        textAlign,
+        color,
+        fontFamily,
+        fontSize,
+      }}
+      responsive={responsive}
+    >
+      {children}
+    </ParagraphWrapper>
+  )
 }

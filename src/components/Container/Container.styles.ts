@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { generateResponsiveStyles, ResponsiveProps } from '../../utils/responsive'
 
-export const ContainerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+export const ContainerWrapper = styled.div<{ responsive?: ResponsiveProps }>`
   box-sizing: border-box;
-`;
+  flex-direction: column;
+
+  ${({ responsive }) => generateResponsiveStyles(responsive)}
+`
