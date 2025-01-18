@@ -1,27 +1,17 @@
-// {
-//     "compilerOptions": {
-//       "target": "ES6",
-//       "module": "ESNext",
-//       "jsx": "react-jsx",
-//       "declaration": true,
-//       "outDir": "dist",
-//       "moduleResolution": "node",
-//       "esModuleInterop": true,
-//       "skipLibCheck": true,
-//       "forceConsistentCasingInFileNames": true
-//     },
-//     "include": ["src/**/*"],
-//     "exclude": ["node_modules", "dist"]
-// }
-
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "strict": true,
-    "allowImportingTsExtensions": true
+    "target": "ESNext",                         // Modern JS output
+    "module": "ESNext",                         // Use ES modules
+    "declaration": true,                        // Generate `.d.ts` files
+    "declarationMap": true,                     // Map for `.d.ts` files
+    "outDir": "dist",                           // Output directory
+    "rootDir": "src",                           // Source directory
+    "moduleResolution": "Node",                // Resolve modules like Node.js
+    "esModuleInterop": true,                    // Enable interop with CommonJS
+    "skipLibCheck": true,                       // Skip type checks for node_modules
+    "strict": true,                              // Enable strict type checking
+    "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src"],                           // Files to include
+  "exclude": ["node_modules", "dist", "src/stories", "**/*.stories.ts", "**/*.stories.tsx"]
 }

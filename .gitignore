@@ -22,3 +22,6 @@ node_modules
 
 # storybook
 src/stories
+
+# dist folder
+dist
