@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { RowWrapper } from './Row.styles.ts';
+import { RowWrapper } from './Row.styles';
 
 type RowProps = {
   children: ReactNode

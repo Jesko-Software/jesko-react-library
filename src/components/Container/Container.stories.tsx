@@ -12,19 +12,19 @@ export default {
 export const DefaultContainer = () => (
   <Container>
     <Row>
-      <Header center>Welcome to Jesko</Header>
+      <Header>Welcome to Jesko</Header>
     </Row>
     <Row>
       <Container>
         <Row>
           <Column width="33%">
-            <Paragraph center>Column 1</Paragraph>
+            <Paragraph>Column 1</Paragraph>
           </Column>
           <Column width="33%">
-            <Paragraph center>Column 2</Paragraph>
+            <Paragraph>Column 2</Paragraph>
           </Column>
           <Column width="33%">
-            <Paragraph center>Column 3</Paragraph>
+            <Paragraph>Column 3</Paragraph>
           </Column>
         </Row>
       </Container>
